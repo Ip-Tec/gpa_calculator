@@ -34,3 +34,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# image i ended up not using
+/public/BG
+
+# Test code
+/component/Input.tsx
+/component/MainComponent.tsx
+/component/ScoreListDropdown.tsx
+
+/cotext

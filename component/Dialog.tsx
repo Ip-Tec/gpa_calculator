@@ -63,7 +63,7 @@ function Dialog({
   };
 
   return (
-    <div className="bg-white bg-opacity-50 p-8 rounded-md w-96">
+    <div className="bg-white bg-opacity-85 p-8 rounded-md w-96">
       <h2 className="text-xl font-bold mb-4 text-black m-2">
         {selectedOption === "AddCourse" ? "Add Course" : "New Course Year"}
       </h2>

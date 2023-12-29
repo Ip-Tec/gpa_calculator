@@ -12,7 +12,7 @@ export default function Home() {
   );
 
   const handleDialogClose = () => {
-    setShowDialog("false");
+    setShowDialog(false);
   };
 
   const handleOptionClick = (option: string) => {

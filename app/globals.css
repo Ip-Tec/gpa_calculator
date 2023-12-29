@@ -45,6 +45,9 @@ body::before {
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
+.bg-opacity-85 {
+  --tw-bg-opacity: 0.85;
+}
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -82,7 +85,7 @@ input {
   width: 2.5rem !important;
 }
 .w-14 {
-  width: 3.5rem/* 56px */;
+  width: 3.5rem /* 56px */;
 }
 .F {
   background: rgb(255, 81, 81);
