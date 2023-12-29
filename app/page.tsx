@@ -6,7 +6,7 @@ import Head from "@/component/Head";
 import Dialog from "@/component/Dialog";
 
 export default function Home() {
-  const [showDialog, setShowDialog] = useState<boolean>(true);
+  const [showDialog, setShowDialog] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(
     "NewCourseYear"
   );
@@ -51,7 +51,7 @@ export default function Home() {
         </p>
         <p
           className="border bg-gradient-to-b p-3 backdrop-blur-2xl border-neutral-800 bg-red-800 from-inherit rounded-md cursor-pointer hover:border-b hover:bg-red-500 hover:border-red-500"
-          onClick={() => clearSession}
+          onClick={() => clearSession()}
         >
           Delect All Data
         </p>
