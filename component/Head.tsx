@@ -13,7 +13,7 @@ export default function Head() {
     const storedData = sessionStorage.getItem("data");
     const parsedData = JSON.parse(storedData || "{}");
     setJsonData(parsedData);
-
+  
     // Listen for changes in the session and update the component
     const handleStorageChange = (event: StorageEvent) => {
       if (event.key === "data" && event.newValue !== null) {
@@ -21,16 +21,21 @@ export default function Head() {
         setJsonData(updatedData);
       }
     };
-
-    window.addEventListener("storage", handleStorageChange);
-
+  
+    // Add event listener only if window is defined (running in the browser)
+    if (typeof window !== 'undefined') {
+      window.addEventListener("storage", handleStorageChange);
+    }
+  
     // Cleanup the event listener on component unmount
     return () => {
-      window.removeEventListener("storage", handleStorageChange);
+      // Remove event listener only if window is defined
+      if (typeof window !== 'undefined') {
+        window.removeEventListener("storage", handleStorageChange);
+      }
     };
-  }, [sessionStorage.data]); // Add sessionStorage.data to the dependency array
-  // Empty dependency array means this effect runs once on mount
-
+  }); // Empty dependency array means this effect runs once on mount
+  
   if (!jsonData.years || jsonData.years.length === 0) {
     return (
       <div className="flex mx-auto mt-20 px-6 text-2xl">
