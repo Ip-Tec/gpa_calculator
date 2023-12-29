@@ -22,9 +22,11 @@ export default function Home() {
     setShowDialog(true);
   };
   const clearSession = async () => {
-    await sessionStorage.clear();
-    const ok = confirm("Do you want to delect all data");
-    if (ok) await window.location.reload;
+    if (typeof window !== "undefined") {
+      await sessionStorage.clear();
+      const ok = confirm("Do you want to delete all data");
+      if (ok) await window.location.reload();
+    }
   };
 
   return (
