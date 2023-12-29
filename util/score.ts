@@ -46,8 +46,8 @@ const calculateCGPA = (yearDataList: YearData[]): string => {
     }
   });
 
-  console.log(yearDataList.length);
-  console.log(totalGPA);
+  // console.log(yearDataList.length);
+  // console.log(totalGPA);
   
   const cgpa = yearDataList.length / totalGPA;
   return cgpa.toFixed(4);
@@ -56,22 +56,22 @@ const calculateCGPA = (yearDataList: YearData[]): string => {
 export const calculateAndPrintResults = (
   yearDataList: YearData[] | any
 ): void => {
-  console.log(yearDataList);
+  // console.log(yearDataList);
   if (!isYearDataArray(yearDataList)) {
-    console.log(yearDataList);
-    console.error("Invalid yearDataList format");
+    // console.log(yearDataList);
+    // console.error("Invalid yearDataList format");
     return;
   }
 
   yearDataList.forEach((yearData) => {
     calculateYearData(yearData);
-    console.log(
-      `Year ${yearData.year} - GPA: ${yearData.GPA}, CGPA: ${yearData.CGPA}`
-    );
+    // console.log(
+    //   `Year ${yearData.year} - GPA: ${yearData.GPA}, CGPA: ${yearData.CGPA}`
+    // );
   });
 
   const cgpa = calculateCGPA(yearDataList);
-  console.log(`Overall CGPA: ${cgpa}`);
+  // console.log(`Overall CGPA: ${cgpa}`);
 };
 
 // const yearDataList = JSON.parse(sessionStorage.getItem("data"));

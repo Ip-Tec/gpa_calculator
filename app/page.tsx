@@ -4,8 +4,10 @@
 import { useState } from "react";
 import Head from "@/component/Head";
 import Dialog from "@/component/Dialog";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [showDialog, setShowDialog] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<string | null>(
     "NewCourseYear"
@@ -19,8 +21,10 @@ export default function Home() {
     setSelectedOption(option);
     setShowDialog(true);
   };
-  const clearSession = () => {
-    sessionStorage.clear();
+  const clearSession = async () => {
+    await sessionStorage.clear();
+    const ok = confirm("Do you want to delect all data");
+    if (ok) await window.location.reload;
   };
 
   return (
@@ -32,7 +36,7 @@ export default function Home() {
           </p>
         </div> */}
         <div className="container py-2 mb-40 mt-2 z-10 rounded-md max-w-sm bg-opacity-50 text-black backdrop-blur-0">
-            <Head />
+          <Head />
         </div>
       </main>
 

@@ -20,7 +20,7 @@ export default function NewCourseYear(
 ) {
   // Parse stored data from sessionStorage
   const data = JSON.parse(sessionStorage.getItem("data") ?? "{}") as NewCourse;
-  console.log(data);
+  // console.log(data);
 
   // Ensure that the 'years' array is present in the stored data
   if (!data.years) {
@@ -44,8 +44,8 @@ export default function NewCourseYear(
   const newYear: Year = {
     year: parseInt(courseYear?.toString() || "0", 10),
     courses: [newCourseEntry],
-    totalUnit: parseInt(courseUnit, 10),
-    totalWGP: parseInt(courseScore, 10) * 3,
+    // totalUnit: parseInt(courseUnit, 10),
+    // totalWGP: parseInt(courseScore, 10),
   };
 
   // Push the new year to the 'years' array

@@ -1,6 +1,5 @@
 import { NewCourse, Course, Year } from "@/type";
 import { GradePoint, ScorePoint, ScoreWGP } from "./Calculator";
-import { calculateAndPrintResults } from "./score";
 
 export async function AddCourse(
   courseYear: string | undefined,
@@ -72,10 +71,13 @@ export async function AddCourse(
     0
   );
 
-  lastYear.totalWGP = lastYear.courses.reduce(
+  const wgp = lastYear.courses.reduce(
     (total, course) => total + ((course.WGP as number) || 0),
     0
   );
+  // console.log(wgp);
+
+  lastYear.totalWGP = wgp as number;
 
   let gpa = lastYear.totalWGP / lastYear.totalUnit;
   lastYear.GPA = gpa.toFixed(3);
