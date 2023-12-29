@@ -8,15 +8,17 @@ export const metadata: Metadata = {
   title: "GPA Calculator",
   description: "GPA Calculator for Nigeria University",
   twitter: {
+    card: "summary_large_image",
     title: "GPA Calculator",
     description: "GPA Calculator for Nigeria University",
-    images: "/GPA_Calculator.png",
+    site: "@your_twitter_handle",
+    images: ["/GPA_Calculator.png"],
   },
   openGraph: {
     title: "GPA Calculator",
     description: "GPA Calculator for Nigeria University",
     siteName: "GPA Calculator",
-    images: "/GPA_Calculator.png",
+    images: [{ url: "/GPA_Calculator.png", alt: "GPA Calculator Image" }],
   },
 };
 
@@ -27,6 +29,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Add any other necessary meta tags */}
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
