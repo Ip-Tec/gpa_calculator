@@ -5,8 +5,8 @@ const whatsappIcon: React.FC<IconProps> = ({ width, height }) => {
   return (
     <>
       <svg
-        width={width || "800px"}
-        height={height || "800px"}
+        width={width || "3rem"}
+        height={height || "3rem"}
         viewBox="0 0 1024 1024"
         xmlns="http://www.w3.org/2000/svg"
       >
