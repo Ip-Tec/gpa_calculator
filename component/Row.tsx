@@ -18,7 +18,7 @@ const Row: React.FC<{ course: CourseProps }> = ({ course }) => {
   return (
     <>
       <tr
-        className={`font-mono border-b h-10 my-2 bg-gray-800 border-lime-500 ${CourseGrade}`}
+        className={`font-mono border-b border-l h-10 border-black shadow-md block ${CourseGrade} border-l-red-400`} style={{display: "table-row"}}
         key={CourseIndex}
       >
         <td

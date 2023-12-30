@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Nav } from "@/component/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,7 +35,12 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* Add any other necessary meta tags */}
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className="flex flex-col">
+          <Nav />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

@@ -38,3 +38,12 @@ export interface Year {
 export type NewCourse = {
   years: Year[];
 };
+
+export interface IconProps {
+  width: string | number | null;
+  height: string | number | null;
+}
+export interface MessageProps {
+  msg: string | number | null;
+  props?: string | number | null;
+}
