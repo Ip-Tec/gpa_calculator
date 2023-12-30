@@ -25,7 +25,7 @@ export const GradePoint = (numericScore: number): Grade | "" => {
   if (numericScore >= 40 && numericScore < 44.99) return Grade.E;
   else if (numericScore >= 45 && numericScore < 49.99) return Grade.D;
   else if (numericScore >= 50 && numericScore < 60.99) return Grade.C;
-  else if (numericScore >= 60 && numericScore < 70.99) return Grade.B;
+  else if (numericScore >= 60 && numericScore < 69.99) return Grade.B;
   else if (numericScore >= 70 && numericScore <= 100) return Grade.A;
   else return "";
 };
@@ -35,7 +35,7 @@ export const ScorePoint = (numericScore: number): Point | undefined => {
   if (numericScore >= 40 && numericScore < 44.99) return Point.E;
   else if (numericScore >= 45 && numericScore < 50.99) return Point.D;
   else if (numericScore >= 50 && numericScore < 60.99) return Point.C;
-  else if (numericScore >= 60 && numericScore < 70.99) return Point.B;
+  else if (numericScore >= 60 && numericScore < 69.99) return Point.B;
   else if (numericScore >= 70 && numericScore <= 100) return Point.A;
   else return undefined;
 };
