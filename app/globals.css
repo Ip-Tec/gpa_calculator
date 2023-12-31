@@ -61,8 +61,8 @@ li {
   padding-right: 1rem;
 }
 .py-4 {
-  padding-up: 1rem /* 16px */;
-  padding-down: 1rem;
+  padding-bottom: 1rem /* 16px */;
+  padding-bottom: 1rem;
 }
 .font-bold {
   font-weight: 700;
