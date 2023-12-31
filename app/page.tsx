@@ -41,19 +41,19 @@ export default function Home() {
 
         <footer className="fixed bottom-0 z-10 h-auto flex justify-evenly items-center container px-3 md:px-6 w-auto max-w-sm overflow-hidden md:max-w-xl m-auto right-0 transform left-0 bg-gradient-to-b bg-opacity-20  backdrop-blur-2xl text-sm rounded text-center bg-slate-600">
           <p
-            className="text-black hover:text-gray-100 p-4 mx-2 w-full border-green-800 from-inherit rounded cursor-pointer border-b-2 hover:bg-green-500 zoom-sm"
+            className="text-black hover:text-gray-100 px-2 py-4 mx-2 w-full border-green-800 from-inherit rounded cursor-pointer border-b-2 hover:bg-green-500 zoom-sm"
             onClick={() => handleOptionClick("AddCourse")}
           >
             Add Course
           </p>
           <p
-            className="text-black hover:text-gray-100 p-4 mx-2 w-full border-sky-800 from-inherit rounded cursor-pointer border-b-2 hover:bg-sky-500 zoom-sm"
+            className="text-black hover:text-gray-100 px-2 py-4 mx-2 w-full border-sky-800 from-inherit rounded cursor-pointer border-b-2 hover:bg-sky-500 zoom-sm"
             onClick={() => handleOptionClick("NewCourseYear")}
           >
             New Level
           </p>
           <p
-            className="text-black p-4 w-full border-red-500 from-inherit rounded cursor-pointer border-b-2  hover:bg-red-500 hover:text-gray-300 zoom-sm"
+            className="text-black px-2 py-4 w-full border-red-500 from-inherit rounded cursor-pointer border-b-2  hover:bg-red-500 hover:text-gray-300 zoom-sm"
             onClick={() => clearSession()}
           >
             Delete All
