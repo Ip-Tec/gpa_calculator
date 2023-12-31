@@ -56,7 +56,7 @@ export default function Home() {
             className="text-black p-2 w-full border-red-500 from-inherit rounded cursor-pointer border-b-2  hover:bg-red-500 hover:text-gray-300 zoom-sm"
             onClick={() => clearSession()}
           >
-            Delect All
+            Delete All
           </p>
         </footer>
 
