@@ -122,7 +122,7 @@ export default function Head() {
                 style={{ marginBottom: "1rem" }}
               >
                 <p className="font-bold w-full">Year/level: {year.year}</p>
-                <table style={{ fontSize: "large" }}>
+                <table style={{ fontSize: "1.1em" }}>
                   <thead>
                     <tr
                       className="w-full font-semibold"
