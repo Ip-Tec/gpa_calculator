@@ -122,11 +122,11 @@ export default function Head() {
                 style={{ marginBottom: "1rem" }}
               >
                 <p className="font-bold w-full">Year/level: {year.year}</p>
-                <table style={{ fontSize: "0.4em" }}>
+                <table style={{ fontSize: "0.5em" }}>
                   <thead>
                     <tr
                       className="w-full font-semibold"
-                      style={{ fontWeight: "300" }}
+                      style={{ fontWeight: "200" }}
                     >
                       <th>Course Code</th>
                       <th>Course Score</th>
